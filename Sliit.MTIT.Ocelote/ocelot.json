@@ -1,0 +1,57 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5201"
+  },
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/patient",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownStreamPathTemplate": "./api/patient",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5053
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/patient/{Id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownStreamPathTemplate": "./api/patient/{Id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5053
+        }
+
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/employee",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownStreamPathTemplate": "./api/employee",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5054
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/employee/{Id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownStreamPathTemplate": "./api/employee/{Id}",
+      "DownStreamScheme": "http",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5054
+        }
+
+      ]
+    }
+  ]
+}
